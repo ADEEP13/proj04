@@ -80,3 +80,22 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 - Powered by HTML and Tailwind CSS
 
 Built with ❤️ on Rocket.new
+
+
+## Firebase integration (added)
+
+Files added:
+- `js/firebase-config.js` — add your Firebase config object here (see instructions).
+- `js/app.js` — minimal client-side Firestore reads to populate the UI.
+
+### Steps to integrate Firebase
+1. Create a Firebase project at https://console.firebase.google.com
+2. Add a Web App and copy the Firebase config object.
+3. Open `js/firebase-config.js` and replace placeholder values with your project's config.
+4. In Firebase Console -> Build -> Firestore, create a database (test mode okay for dev).
+5. Optionally create collections/documents:
+   - `users/public_profile` — with `{ "name": "Your Name" }`
+   - `goals` collection — documents with `{ "name": "...", "goal": "..." }`
+   - `sessions` collection — documents with `{ "durationMinutes": 25 }`
+6. Host the site on GitHub Pages (push the repo and enable Pages).
+
